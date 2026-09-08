@@ -59,6 +59,6 @@ if __name__ == '__main__':
         f.append(factorize(n))
 
     top_factors = count_factors(f)
-    with open('top_factors.txt', 'w') as f:
+    with open('outputs/top_factors.txt', 'w') as f:
         for fac in top_factors:
             f.write(f"{fac}: {top_factors[fac]}\n")

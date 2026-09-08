@@ -15,6 +15,10 @@ def most_frequent_letters(s: str):
         else: freq[c] +=1
 
     top_10 = sorted(freq, key=freq.get, reverse=True)[:10]
+
+    for k in top_10:
+        print(f"{k}: {freq[k]}")
+
     return top_10
 
 # p + k = c --> k = c - p (mod 26)
@@ -26,10 +30,10 @@ if __name__ == '__main__':
     splitted = split_on_key_len(kl)
     top_10s = [] # will be 10x10
     for i, s in enumerate(splitted):
+        print("Line ", i+1)
         top_10s.append(most_frequent_letters(s))
     
-
-    with open('keys.txt', 'w')as f:
+    with open('outputs/keys.txt', 'w')as f:
         for i in range(10):
             key_cand = ""
             for j in range(kl):

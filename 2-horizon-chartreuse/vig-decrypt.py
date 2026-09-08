@@ -12,4 +12,4 @@ def decrypt(c: str, key: str):
 
 if __name__ == "__main__":
     text = open("v.txt", "r").read()
-    open('plaintext.txt', 'w').write(decrypt(text, "UNDERNIGHT"))
+    open('outputs/plaintext.txt', 'w').write(decrypt(text, "UNDERNIGHT"))
