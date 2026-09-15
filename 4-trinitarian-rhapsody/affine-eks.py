@@ -11,3 +11,4 @@ for m in primes:
     for b in range (26):
         print(f"======== TEST M: {m}, B: {b} ==============")
         print(decrypt_affine(m, b, text))
+
