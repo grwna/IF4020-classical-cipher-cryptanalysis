@@ -1,0 +1,52 @@
+Enigma workings:
+For encryption
+Keyboards: plaintext input
+Lampboard: ciphertext output
+
+For decryption, it is the exact opposite, you input ciphetext, plaintext lights up
+
+
+The files:
+- plugboard
+- reflector
+- rotor
+- machine
+- enigma
+
+Plugboards are plugs on the machine 
+A reflector is the output of electricity after flowing through all rotors, it reflects the signal back as a different through the rotors. During this reflection, a letter is substituted into another.
+Overall the amount of letter changes are: 
+    - 2m + 1 -> no plugboard
+    - With a plugboard, a letter is substituted again into another letter. Example: A -> J, it means if the rotor's final output is A, it turns to J, and vice versa (mirrored).
+        - NOTE: plugboard subsitution happens before and after the rotors 
+
+When the rotors rotates, the electricity path changes. Each rotor usees a pawl to move it, and the previous rotor has a notch. Only the first rotor moves every time, the second only moves when the first rotor is at its notch.
+
+Key/configuration:
+- Rotor order: which rotor to which slot (8 rotors, pick 3, the order can be switched up)
+- Ring settings <-> includes notch: offset between the ratchet and the alphabet ring (where the notch lives)
+- Rotor starting positions: starting key for each rotor
+- Plugboard connections
+
+Dari KODE:
+- Ada 8 Rotor berbeda, yang masing-masing memiliki order dan ring setting yang berbeda (ini sama dengan standard naval). 
+- Hanya reflector B
+- Ring settings hanya memengaruhi wiring dari rotor, dan tidak memengaruhi notch.
+- Plugboard harus 10 pasangan, atau kosong.
+- Everything else exactly the same, each configuration juga sama persis.
+
+Overall konfigurasi pada soal ini lebih simpel dari standard Enigma M3. 
+
+Total kemungkinan
+Plugboard: 26 P 20 / 10! x 2^10 = 150,738,274,937,250 (+ 1 untuk plugboard kosong)
+Rotor: 8 P 3 = 336 
+Positions: 26^3
+Rings: 26^3
+
+
+Weakness Enigma:
+Having some correct configuration tends to make IoC higher, not sure why its the case but it is the case.
+
+This means partial correctness leads to a higher IoC. Ini ide utama untuk mencari konfigurasi yang benar.
+
+

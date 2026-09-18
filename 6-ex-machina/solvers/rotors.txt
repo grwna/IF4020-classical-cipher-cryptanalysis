@@ -1,0 +1,14 @@
+(0.066935, ('VI', 'II', 'IV'), 'AAA', 'KQF')
+(0.064698, ('VI', 'II', 'IV'), 'AAB', 'KQG')
+(0.062550, ('VI', 'II', 'IV'), 'AAY', 'KQD')
+(0.062192, ('VI', 'II', 'IV'), 'AAZ', 'KQE')
+(0.060582, ('VI', 'II', 'IV'), 'AAC', 'KQH')
+(0.060403, ('VI', 'II', 'IV'), 'AAX', 'KQC')
+(0.059687, ('VI', 'II', 'IV'), 'AAD', 'KQI')
+(0.057002, ('VII', 'III', 'I'), 'AAR', 'KOB')
+(0.057002, ('VII', 'III', 'I'), 'AAS', 'KOC')
+(0.056465, ('VI', 'II', 'IV'), 'AAE', 'KQJ')
+
+real    111.72s
+user    1675.38s
+sys     0.62s
