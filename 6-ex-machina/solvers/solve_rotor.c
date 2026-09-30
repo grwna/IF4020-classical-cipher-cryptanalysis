@@ -70,7 +70,7 @@ double evaluate_candidate(Rotor rl, Rotor rm, Rotor rr, const Reflector *ref, co
 
 // searches ring setting and starting positions given a rotor order
 // ring search only on right as left and middle barely have any impact, as shown on Ostwald & Weierud's paper
-void solve_rotor_settings(int i, int j, int k, const Reflector *ref, const int *ct, int len, Result *my_tops) {
+void solve_rotor(int i, int j, int k, const Reflector *ref, const int *ct, int len, Result *my_tops) {
     // unstantiate wiring tables once per rotor combination 
     Rotor rl = build(get(RN[i]), 0, 0);
     Rotor rm = build(get(RN[j]), 0, 0);
@@ -114,7 +114,7 @@ int main() {
                 if (i == k || j == k) continue;
 
                 Result my_tops[10] = {0}; // thread-local top 10 buffer
-                solve_rotor_settings(i, j, k, &ref, ct, len, my_tops);
+                solve_rotor(i, j, k, &ref, ct, len, my_tops);
 
                 // merge thread-local candidates into global array
                 #pragma omp critical
